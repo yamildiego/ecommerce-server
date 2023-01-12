@@ -8,6 +8,7 @@ const routesProducts = require("./src/routes/products");
 const config = require("./config");
 
 mongoose.set("strictQuery", false);
+
 mongoose.connect(config.MONGODB_CONNECTION, { useNewUrlParser: true }).then(() => {
   const app = express();
   app.use(express.json());
